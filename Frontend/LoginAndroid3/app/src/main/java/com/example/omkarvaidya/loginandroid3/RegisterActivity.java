@@ -44,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
                 String uname=regUname.getText().toString();
                 String pass=regPass.getText().toString();
-                String url = "http://1bcfb5ad.ngrok.io/register?username="+uname+"&pass="+pass;
+                String url = "http://4d161b3a.ngrok.io/register?username="+uname+"&pass="+pass;
                 StringRequest postRequest = new StringRequest(Request.Method.GET, url,
                         new Response.Listener<String>()
                         {

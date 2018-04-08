@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
                 final String uname=etUname.getText().toString();
                 String pass=etPass.getText().toString();
-                String url = "http://1bcfb5ad.ngrok.io/login?username="+uname+"&pass="+pass;
+                String url = "http://4d161b3a.ngrok.io/login?username="+uname+"&pass="+pass;
                 StringRequest postRequest = new StringRequest(Request.Method.GET, url,
                         new Response.Listener<String>()
                         {
@@ -66,14 +66,14 @@ public class MainActivity extends AppCompatActivity {
                                     sharedpreferences = getSharedPreferences(mypreference,
                                             Context.MODE_PRIVATE);
 
-                                    if (sharedpreferences.contains("username")) {
-                                        Toast.makeText(getBaseContext(),(sharedpreferences.getString ("username", "##")),
-                                                Toast.LENGTH_SHORT).show();
-                                    }
-                                    else {
-                                        Toast.makeText(getBaseContext(),"User not available in SP",
-                                                Toast.LENGTH_SHORT).show();
-                                    }
+//                                    if (sharedpreferences.contains("username")) {
+//                                        Toast.makeText(getBaseContext(),(sharedpreferences.getString ("username", "##")),
+//                                                Toast.LENGTH_SHORT).show();
+//                                    }
+//                                else {
+//                                    Toast.makeText(getBaseContext(),"User not available in SP",
+//                                            Toast.LENGTH_SHORT).show();
+//                                }
                                     Intent shareCont = new Intent(getApplicationContext(), SharingPage.class);
                                     startActivity(shareCont);
 
