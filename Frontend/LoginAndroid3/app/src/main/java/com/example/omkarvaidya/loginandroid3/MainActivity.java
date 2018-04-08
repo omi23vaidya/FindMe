@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
                 final String uname=etUname.getText().toString();
                 String pass=etPass.getText().toString();
-                String url = "http://232e6d07.ngrok.io/login?username="+uname+"&pass="+pass;
+                String url = "http://1bcfb5ad.ngrok.io/login?username="+uname+"&pass="+pass;
                 StringRequest postRequest = new StringRequest(Request.Method.GET, url,
                         new Response.Listener<String>()
                         {
@@ -74,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
                                         Toast.makeText(getBaseContext(),"User not available in SP",
                                                 Toast.LENGTH_SHORT).show();
                                     }
+                                    Intent shareCont = new Intent(getApplicationContext(), SharingPage.class);
+                                    startActivity(shareCont);
+
                                 }
                                 else {
                                     Toast.makeText(getBaseContext(),"Sorry! Username is incorrect.",

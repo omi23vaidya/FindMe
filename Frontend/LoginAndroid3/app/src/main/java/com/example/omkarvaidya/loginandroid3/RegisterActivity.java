@@ -44,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
                 String uname=regUname.getText().toString();
                 String pass=regPass.getText().toString();
-                String url = "http://232e6d07.ngrok.io/register?username="+uname+"&pass="+pass;
+                String url = "http://1bcfb5ad.ngrok.io/register?username="+uname+"&pass="+pass;
                 StringRequest postRequest = new StringRequest(Request.Method.GET, url,
                         new Response.Listener<String>()
                         {
@@ -58,6 +58,8 @@ public class RegisterActivity extends AppCompatActivity {
                                     //Intent myIntent = new Intent(MainActivity.this,
                                     //      sharingPage.class);
                                     //startActivity(myIntent);
+                                    Intent myIntent = new Intent(RegisterActivity.this, SharingPage.class);
+                                    startActivity(myIntent);
                                 }
                                 else {
                                     Toast.makeText(getBaseContext(),"Sorry! Username is incorrect.",
